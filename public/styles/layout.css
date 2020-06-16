@@ -14,12 +14,39 @@ html {
  * Global layout stuff
  */
 
-body {
-  color: #545149;
+ body {
+  color: #ffffff;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 40px;
+  font-family: 'Source Sans Pro';
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+nav {
+  background-color: #4056A1;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+span {
+  font-family: 'Bungee';
+}
+
+.new-tweet {
+  font-family: 'Source Sans Pro';
+  font-size: 25px;
+}
+
+.bold-tweet {
+  font-weight: bold;
+  font-family: 'Source Sans Pro';
+}
+
+main {
+  color: black;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}

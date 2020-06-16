@@ -1,0 +1,23 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.your-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: -70px;
+}
+
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #464747;
+  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+}
+
