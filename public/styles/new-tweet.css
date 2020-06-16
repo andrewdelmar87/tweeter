@@ -8,10 +8,12 @@
 
 #tweet-text {
   border: 0;
-  border-bottom: 5px solid #ff0066;
+  border-bottom: 7px solid #ff0066;
   outline: 0;
   width: 600px;
   background-color: #4056A1;
+  color: white;
+  font-size: 24px;
 }
 
 ::placeholder {
@@ -29,7 +31,7 @@ button {
  padding-left: 450px;
  font-family: 'Bungee';
  font-size: 24px;
- color: #ff0066;
+ color: white;
 }
 
 .button-div {

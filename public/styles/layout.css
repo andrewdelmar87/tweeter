@@ -21,14 +21,6 @@ html {
   font-family: 'Source Sans Pro';
 }
 
-nav {
-  background-color: #4056A1;
-  height: 120px;
-  display: flex;
-  justify-content: space-between;
-  padding: 24px;
-}
-
 span {
   font-family: 'Bungee';
 }
