@@ -1,0 +1,51 @@
+.posted-tweets {
+  border: black solid 3px;
+  margin-top: 40px;
+}
+
+.posted-tweets:hover {
+  box-shadow: 4px 4px 6px 2px darkgrey;
+}
+
+.tweet-header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-main {
+  color: white;
+  border: 0;
+  font-size: 20px;
+}
+
+.inner {
+    width: 99%;
+    height: 1px;
+    margin: 0px auto;
+    border-bottom: 3px solid #ff0066;
+}
+
+.tweet-footer {
+  color: white;
+  font-size: 12px;
+}
+
+.header-name {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.header-handle {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.tweet-text {
+  margin-left: 10px;
+}
+
