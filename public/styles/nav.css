@@ -4,5 +4,8 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 24px;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
 }
 
