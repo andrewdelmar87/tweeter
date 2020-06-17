@@ -11,6 +11,7 @@
 
 .tweet-header {
   color: white;
+  padding-top: ;
   display: flex;
   justify-content: space-between;
 }
