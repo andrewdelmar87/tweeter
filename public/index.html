@@ -17,32 +17,32 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/posted-tweets.css" type="text/css" />
 
-     <!-- External JS -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      
-     <!--  Bringing in JQuery-->
+    <!--  Bringing in JQuery-->
     <script src="/vendor/jquery-2.2.3.min.js"></script>
 
      <!-- App JS -->
-     <script type="text/javascript" src="/scripts/client.js"></script>
-     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+     <script type="text/javascript" src="/scripts/client.js" defer></script>
+     <script type="text/javascript" src="/scripts/composer-char-counter.js" defer></script>
     
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-   <nav>
+    <nav>
       <span class="logo">tweeter</span>
       <span class="top-tweet"><span class="bold-tweet">Write</span> a new tweet</span>
     </nav>
 
     <header class="body-header">
       <div class="avatar">
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png" alt="profile avatar"> 
       </div>
       <br>
       <div class="your-name">
-          <h2>Andrew Delmar</h2>
+        <h2>Andrew Delmar</h2>
       </div>
     </header>
   
@@ -52,8 +52,7 @@
       <section class="new-tweet">
         <form method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="inner">
-          </div>
+          <div class="inner"></div>
           <div class="button-div">
             <button>tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -74,6 +73,11 @@
           </div>
           <footer class="tweet-footer">
             <p>10 days ago</p>
+            <div class="tweet-symbols">
+              <img src="https://img.icons8.com/small/16/000000/filled-flag2.png" alt="flag icon"/>
+              <img src="https://img.icons8.com/small/16/000000/environment.png" alt="retweet icon "/>
+              <img src="https://img.icons8.com/ios-filled/16/000000/melting-hert.png" alt="heart icon"/>
+            </div>
           </footer>
         </article>
       </section>

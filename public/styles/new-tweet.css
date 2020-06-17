@@ -11,37 +11,37 @@
   outline: 0;
   width: 100%;
   background-color: #4056A1;
-  color: white;
+  color: #fff;
   font-size: 24px;
   height: 30px;
   margin-top: 30px;
 }
 
 .inner {
-  width: 99%;
+  width: 100%;
+  /* padding: 0 2px; */
   height: 1px;
-  margin: 0px auto;
   border-bottom: 3px solid #ff0066;
 }
 
-::placeholder {
-  color: white;
+textarea::placeholder {
+  color: #fff;
   display: flex;
   align-self: flex-end;
 }
 
 button {
-  color: #ffffff;
-  background-color: #ff0066;
   font-family: 'Bungee';
   font-size: 24px;
+  color: #fff;
+  background-color: #ff0066;
 }
 
 .counter {
- padding-left: 450px;
- font-family: 'Bungee';
- font-size: 24px;
- color: white;
+  font-family: 'Bungee';
+  font-size: 24px;
+  padding-left: 450px;
+  color: #fff;
 }
 
 .button-div {
