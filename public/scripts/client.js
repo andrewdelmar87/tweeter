@@ -13,7 +13,7 @@ $(() => {
     let avatar = tweetData.user.avatar; //add
     let tweetBody = tweetData.content.text;
     let timeStamp = tweetData.created_at;
-    let currentDay = new Date();
+    let currentDay = new Date()
     let timeConvert = currentDay.getTime();
     let timeAgo = timeConvert - timeStamp;
 
@@ -28,6 +28,7 @@ $(() => {
     const $tweet = 
       `<article>
         <header class="tweet-header">
+          
           <p class="header-name">${userName}</p>
           <p class="header-handle">${handle}</p>
         </header>
