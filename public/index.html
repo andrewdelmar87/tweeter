@@ -34,20 +34,26 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
-      <span class="top-tweet"><span class="bold-tweet">Write</span> a new tweet</span>
+      <button class="nav-button">
+        <span class="top-tweet"><span class="bold-tweet">Write</span> a new tweet</span>
+      </button>
+      <!-- add button -->
     </nav>
-
+    <div class="body-columns">
+    <div class="body-column-left">
     <header class="body-header">
       <div class="avatar">
         <img src="/images/profile-hex.png" alt="profile avatar"> 
+        <br>
+        <div class="your-name">
+          <h2>Andrew Delmar</h2>
       </div>
-      <br>
-      <div class="your-name">
-        <h2>Andrew Delmar</h2>
       </div>
     </header>
+  </div>
   
     <!-- Page-specific (main) content here -->
+    <div class="body-column-right">
     <main class="container">
 
       <section class="new-tweet">
@@ -62,29 +68,14 @@
         </form>
       </section>  
 
-      <section class="posted-tweets">
-        <!-- <article>
-          <header class="tweet-header">
-            <p class="header-name">Andrew Delmar</p>
-            <p class="header-handle">@ajd</p>
-          </header>
-          <div class="tweet-main">
-            <p class="tweet-text">You know what they say. "Fool me once, strike one. But fool me twice... strike three." - Micheal Scott.</p>
-            <div class="inner">
-            </div>
-          </div>
-          <footer class="tweet-footer">
-            <p>10 days ago</p>
-            <div class="tweet-symbols">
-              <img src="https://img.icons8.com/small/16/000000/filled-flag2.png" alt="flag icon"/>
-              <img src="https://img.icons8.com/small/16/000000/environment.png" alt="retweet icon "/>
-              <img src="https://img.icons8.com/ios-filled/16/000000/melting-hert.png" alt="heart icon"/>
-            </div>
-          </footer>
-        </article> -->
-      </section>
+      <section class="posted-tweets"></section>
+    </div>
+  </div>
+  
+  </div>
 
     </main>
+
     <footer>
       <p class="footer-signature">An AJD creation</p>
     </footer>

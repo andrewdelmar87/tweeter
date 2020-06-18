@@ -4,6 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(".new-tweet").hide()
+
+$(".nav-button").on('click', function(){
+  $(".new-tweet").toggle();
+  let $input = $('#tweet-text')
+  $input.focus();
+});
+
 $(() => {
 
   const createTweetElement = (tweetData) => {
@@ -60,10 +68,10 @@ const renderTweets = function(tweets) {
 
 const validateTweet = function(str) {
   if ((str === "") || (str === null)) {
-    $('.form-error-message').text('Text field empty!').slideDown();
+    $('.form-error-message').text('Text field empty. Do more.').slideDown();
     return true;
   } else if (str.length > 145) {
-    $('.form-error-message').text('Exceed character limit').slideDown();
+    $('.form-error-message').text('Character limit exceeded. Do less.').slideDown();
     return true;
   } 
 };
@@ -72,7 +80,6 @@ const validateTweet = function(str) {
 $('.new-tweet-form').on('submit', function(event) {
   event.preventDefault();
   
-  //
   const text = $('#tweet-text').val().trim();
   console.log('text', text)
   const validate = validateTweet(text);
@@ -81,7 +88,6 @@ $('.new-tweet-form').on('submit', function(event) {
   } else {
     $('.form-error-message').slideUp();
   }
-  //
 
   const data = $(this).serialize();
   $.post('/tweets', data)

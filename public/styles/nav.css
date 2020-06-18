@@ -7,5 +7,21 @@ nav {
   position: fixed;
   top: 0; 
   width: 100%; 
+  z-index: 2;
+}
+
+.nav-button {
+  border: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-button {
+    height: 70px;
+  }
 }
 
