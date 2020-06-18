@@ -9,6 +9,11 @@
   opacity: 3;
 }
 
+.userName-avatar {
+  display: flex;
+  padding-top: 2px;
+}
+
 .tweet-header {
   color: white;
   display: flex;
@@ -56,6 +61,8 @@
 
 .tweet-text {
   margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tweet-symbols {

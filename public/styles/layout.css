@@ -16,9 +16,9 @@ html {
 
  body {
   color: #ffffff;
-  background-color: #4056A1;
   font-size: 40px;
   font-family: 'Source Sans Pro';
+  background-color: #4056A1;
   width: 85%;
 }
 
@@ -68,8 +68,8 @@ footer {
 
   .container {
     padding-top: 22%;
-    display: block;
     padding-left: 25%;
+    display: block;
   }
 
   .body-column-left {
@@ -84,4 +84,8 @@ footer {
   .your-name {
     text-align: center;
   }
+}
+
+@media only screen and (min-width: 768px) {
+
 }
