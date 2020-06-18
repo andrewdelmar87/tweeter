@@ -6,31 +6,6 @@
 
 $(() => {
 
-  const data = [
-    {
-      "user": {
-        "name": "Andrew Delmar",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@ajd"
-      },
-      "content": {
-        "text": "You know what they say. \"Fool me once, strike one. But fool me twice... strike three.\" - Micheal Scott."
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Andrew Delmar",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@ajd" },
-      "content": {
-        "text": "Hi"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
   const createTweetElement = (tweetData) => {
 
     let userName = tweetData.user.name;
@@ -41,14 +16,15 @@ $(() => {
     let currentDay = new Date();
     let timeConvert = currentDay.getTime();
     let timeAgo = timeConvert - timeStamp;
-    // console.log('timeAgo', timeAgo);
-    // console.log('timeStamp', timeStamp);
-    // console.log('currentDay', currentDay);
-    // console.log('timeConvert', timeConvert);
 
     let daysAgo = Math.round(timeAgo / (1000*60*60*60*24));
-    // console.log('daysAgo', daysAgo)
 
+    const escape =  function(str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+    
     const $tweet = 
       `<article>
         <header class="tweet-header">
@@ -56,16 +32,17 @@ $(() => {
           <p class="header-handle">${handle}</p>
         </header>
         <div class="tweet-main">
-          <p class="tweet-text">${tweetBody}</p>
+          <p class="tweet-text">${escape(tweetBody)}</p>
           <div class="inner">
           </div>
         </div>
         <footer class="tweet-footer">
           <p>${daysAgo} days ago</p>
           <div class="tweet-symbols">
-            <img src="https://img.icons8.com/small/16/000000/filled-flag2.png" alt="flag icon"/>
-            <img src="https://img.icons8.com/small/16/000000/environment.png" alt="retweet icon "/>
-            <img src="https://img.icons8.com/ios-filled/16/000000/melting-hert.png" alt="heart icon"/>
+
+            <span class="material-icons">flag</span>
+            <span class="material-icons">repeat</span>
+            <span class="material-icons">favorite</span>
           </div>
         </footer>
       </article>`
@@ -75,15 +52,54 @@ $(() => {
 
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
-    // console.log('tweet', tweet)
-    // console.log('createTweetElement(tweet)', createTweetElement(tweet))
-    $(`.posted-tweets`).append(createTweetElement(tweet));
+    $(`.posted-tweets`).prepend(createTweetElement(tweet));
   }
 };
 
-renderTweets(data);
+
+const validateTweet = function(str) {
+  if ((str === "") || (str === null)) {
+    $('.form-error-message').text('Text field empty!').slideDown();
+    return true;
+  } else if (str.length > 145) {
+    $('.form-error-message').text('Exceed character limit').slideDown();
+    return true;
+  } 
+};
 
 
+$('.new-tweet-form').on('submit', function(event) {
+  event.preventDefault();
+  
+  //
+  const text = $('#tweet-text').val().trim();
+  console.log('text', text)
+  const validate = validateTweet(text);
+  if (validate) {
+    return;
+  } else {
+    $('.form-error-message').slideUp();
+  }
+  //
+
+  const data = $(this).serialize();
+  $.post('/tweets', data)
+    .then(function() {
+      loadTweets();
+      $('.tweet-text').val('');
+    })
+})
+
+const loadTweets = () => {
+  $.getJSON('/tweets')
+    .then(function(data) {
+      
+      $('.posted-tweets').empty()
+      renderTweets(data);
+    })
+  }
+  loadTweets();
+});
 
 
 

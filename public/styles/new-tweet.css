@@ -47,3 +47,13 @@ button {
 .button-div {
   padding-top: 5px;
 }
+
+.form-error-message {
+  color: #ff0066;
+  font-family: 'Source Sans Pro';
+  font-size: 24px;
+  border: #ff0066 dashed 5px;
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+}

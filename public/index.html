@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
     <!-- App CSS -->
@@ -50,7 +51,8 @@
     <main class="container">
 
       <section class="new-tweet">
-        <form method="POST">
+        <form class="new-tweet-form" method="POST" action="/tweets">
+          <div class="form-error-message"></div>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="inner"></div>
           <div class="button-div">
