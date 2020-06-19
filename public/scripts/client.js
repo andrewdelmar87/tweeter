@@ -7,10 +7,12 @@
 $(".new-tweet").hide()
 
 $(".nav-button").on('click', function(){
-  $(".new-tweet").toggle();
-  let $input = $('#tweet-text')
-  $input.focus();
-});
+  $(".new-tweet").animate({
+    height: 'toggle'
+  });
+  let $input = $('#tweet-text');
+    $input.focus();
+}); 
 
 $(() => {
 
@@ -24,12 +26,11 @@ $(() => {
     let currentDay = new Date()
     let timeConvert = currentDay.getTime();
     let timeAgo = timeConvert - timeStamp;
-
     let daysAgo = Math.round(timeAgo / (1000*60*60*60*24));
 
     const escape =  function(str) {
       let div = document.createElement('div');
-      div.appendChild(document.createTextNode(str));
+        div.appendChild(document.createTextNode(str));
       return div.innerHTML;
     }
     
@@ -50,14 +51,12 @@ $(() => {
         <footer class="tweet-footer">
           <p>${daysAgo} days ago</p>
           <div class="tweet-symbols">
-
             <span class="material-icons">flag</span>
             <span class="material-icons">repeat</span>
             <span class="material-icons">favorite</span>
           </div>
         </footer>
       </article>`
-    
   return $tweet;
 };
 
@@ -81,7 +80,6 @@ const validateTweet = function(str) {
 
 $('.new-tweet-form').on('submit', function(event) {
   event.preventDefault();
-  
   const text = $('#tweet-text').val().trim();
   console.log('text', text)
   const validate = validateTweet(text);
@@ -89,20 +87,22 @@ $('.new-tweet-form').on('submit', function(event) {
     return;
   } else {
     $('.form-error-message').slideUp();
-  }
+  };
 
   const data = $(this).serialize();
-  $.post('/tweets', data)
-    .then(function() {
-      loadTweets();
-      $('.tweet-text').val('');
+    $.post('/tweets', data)
+      .then(function() {
+        let $input = $('#tweet-text')
+          $input.val('');
+          $input.focus();
+        loadTweets();
+        $('.tweet-text').val('');
     })
 })
 
 const loadTweets = () => {
   $.getJSON('/tweets')
     .then(function(data) {
-      
       $('.posted-tweets').empty()
       renderTweets(data);
     })

@@ -15,7 +15,7 @@ html {
  */
 
  body {
-  color: #ffffff;
+  color: white;
   font-size: 40px;
   font-family: 'Source Sans Pro';
   background-color: #4056A1;
@@ -26,7 +26,7 @@ span {
   font-family: 'Bungee';
 }
 
-.top-tweet {
+.nav-compose-tweet {
   font-family: 'Source Sans Pro';
   font-size: 25px;
 }
@@ -36,21 +36,12 @@ span {
   font-family: 'Source Sans Pro';
 }
 
-.container {
-  color: black;
-  display: block;
-}
-
 .body-column-right {
-  display: flex;
-  justify-content: center;
   padding-left: 20%;
 }
 
 footer {
   font-size: 16px;
-  color: white;
-  font-family: 'Source Sans Pro';
   padding-left: 10px;
 }
 
@@ -59,33 +50,26 @@ footer {
     flex-wrap: wrap;
 }
 
-/* desktop */
 @media only screen and (min-width: 1024px) {
   .body-columns {
     display: flex;
-    justify-content: space-between;
   }
 
   .container {
     padding-top: 22%;
     padding-left: 25%;
-    display: block;
   }
 
   .body-column-left {
-    width: 30%;
+    width: 40%;
     padding-left: 5%;
   }
 
   .body-column-right {
-    display: block;
+    width: 60%;
   }
 
   .your-name {
     text-align: center;
   }
-}
-
-@media only screen and (min-width: 768px) {
-
 }

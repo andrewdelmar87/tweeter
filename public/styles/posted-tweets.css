@@ -12,30 +12,20 @@
 .userName-avatar {
   display: flex;
   padding-top: 2px;
+  height: 63px;
 }
 
 .tweet-header {
-  color: white;
   display: flex;
   justify-content: space-between;
   border-top: black solid 1px;
 }
 
 .tweet-main {
-  color: white;
-  border: 0;
   font-size: 20px;
 }
 
-.inner {
-    width: 99%;
-    height: 1px;
-    margin: 0px auto;
-    border-bottom: 3px solid #ff0066;
-}
-
 .tweet-footer {
-  color: white;
   font-size: 12px;
   display: grid;
   grid-template-columns: auto auto;

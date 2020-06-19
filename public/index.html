@@ -35,31 +35,28 @@
     <nav>
       <span class="logo">tweeter</span>
       <button class="nav-button">
-        <span class="top-tweet"><span class="bold-tweet">Write</span> a new tweet</span>
+        <span class="nav-compose-tweet"><span class="bold-tweet">Write</span> a new tweet</span>
       </button>
       <!-- add button -->
     </nav>
-    <div class="body-columns">
-    <div class="body-column-left">
+      <div class="body-columns">
+      <div class="body-column-left">
     <header class="body-header">
       <div class="avatar">
         <img src="/images/profile-hex.png" alt="profile avatar"> 
         <br>
-        <div class="your-name">
-          <h2>Andrew Delmar</h2>
-      </div>
+        <div class="your-name"><h2>Andrew Delmar</h2></div>
       </div>
     </header>
-  </div>
+      </div>
   
     <!-- Page-specific (main) content here -->
     <div class="body-column-right">
     <main class="container">
-
       <section class="new-tweet">
         <form class="new-tweet-form" method="POST" action="/tweets">
           <div class="form-error-message"></div>
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="inner"></div>
           <div class="button-div">
             <button>tweet</button>
@@ -68,12 +65,10 @@
         </form>
       </section>  
 
-      <section class="posted-tweets"></section>
+    <section class="posted-tweets"></section>
     </div>
-  </div>
-  
-  </div>
-
+    </div>
+    </div>
     </main>
 
     <footer>
