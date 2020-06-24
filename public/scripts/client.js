@@ -71,7 +71,7 @@ const validateTweet = function(str) {
   if ((str === "") || (str === null)) {
     $('.form-error-message').text('Text field empty. Do more.').slideDown();
     return true;
-  } else if (str.length > 145) {
+  } else if (str.length > 140) {
     $('.form-error-message').text('Character limit exceeded. Do less.').slideDown();
     return true;
   } 
